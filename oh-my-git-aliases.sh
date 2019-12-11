@@ -14,6 +14,7 @@ alias ggpusht='g push origin --tags'
 
 alias gc='g commit'
 alias gc!='gc --amend'
+alias gcam='gc! -m'
 alias gca='gc -a'
 alias gca!='gca --amend'
 
@@ -77,3 +78,31 @@ function current_branch() {
   ref=$(git rev-parse --short HEAD 2> /dev/null) || return
   echo ${ref#refs/heads/}
 }
+
+# git-flow & git-flow-avh
+alias gf='g flow'
+
+alias gff='gf feature'
+alias gffs='gff start'
+alias gfff='gff finish'
+alias gffp='gff publish'
+
+alias gfr='gf release'
+alias gfrs='gfr start'
+alias gfrf='gfr finish'
+alias gfrp='gfr publish'
+
+alias gfh='gf hotfix'
+alias gfhs='gfh start'
+alias gfhf='ghf finish'
+alias gfhp='gfh publish'
+
+alias gfs='gf support'
+alias gfss='gfs start'
+alias gfsf='gfs finish'
+alias gfsp='gfs publish'
+
+alias gfb='gf bugfix'
+alias gfbs='gfb start'
+alias gfbf='gfb finish'
+alias gfbp='gfb publish'
